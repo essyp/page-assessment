@@ -137,6 +137,9 @@ class WalletController extends Controller
 
     public function transactions($id) {
         $user = User::where('ref_number',$id)->first();
+        if(!$user){
+            return ResponseHelper::responseDisplay(400, "Invalid ID supplied!");
+        }
         $data = Transaction::where('user_id',$user->id)->orderBy('id','desc')->get();
         if($data){
             return ResponseHelper::responseDisplay(200, "successful", $data);
