@@ -10,8 +10,8 @@ export default class Main extends Component {
     constructor() {
         super();
         this.state = {
-          base_url: 'http://127.0.0.1:8003/', // Use this to link all files and images
-          api_url: 'http://127.0.0.1:8003/api/', // For send ajax request
+          base_url: 'https://page-assessment.herokuapp.com/', // Use this to link all files and images
+          api_url: 'https://page-assessment.herokuapp.com/api/', // For send ajax request
         }
     }
 
