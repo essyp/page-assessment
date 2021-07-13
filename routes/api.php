@@ -25,7 +25,7 @@ Route::post('/update-profile', [UserController::class, "updateProfile"]);
 Route::get('/logout', [UserController::class, "logout"]);
 
 //wallet Transactions
-Route::post('/transfer', [WalletController::class, "transfer"]);
+Route::post('/transfer-fund', [WalletController::class, "transfer"]);
 Route::post('/credit', [WalletController::class, "credit"]);
 Route::get('/transactions/{id}', [WalletController::class, "transactions"]);
 

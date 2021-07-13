@@ -39,7 +39,7 @@ class Profile extends Component {
         open_loader('#page');
             var form = $("#transfer-form")[0];
             var _data = new FormData(form);
-            axios.post('api/transfer/', _data)
+            axios.post('api/transfer-fund', _data)
         .then((response) => {
         if (response.data.status == 200) {
             toastr.success(response.data.message);
